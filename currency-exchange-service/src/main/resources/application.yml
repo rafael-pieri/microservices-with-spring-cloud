@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: currency-exchange-service
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8000
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+swagger:
+  title: Currency Exchange Service
+  description: Application responsible for currency exchange.
+  version: 1.0.0

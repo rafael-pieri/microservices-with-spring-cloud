@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: currency-conversion-service
+
+server:
+  port: 8100
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+swagger:
+  title: Currency Conversion Service
+  description: Application responsible for currency conversion.
+  version: 1.0.0
