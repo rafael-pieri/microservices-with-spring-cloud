@@ -9,6 +9,7 @@ import static org.mockito.Mockito.when;
 import com.microservices.currencyexchangeservice.model.ExchangeValue;
 import com.microservices.currencyexchangeservice.repository.ExchangeValueRepository;
 import java.math.BigDecimal;
+import java.util.Optional;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -31,7 +32,7 @@ public class CurrencyExchangeServiceTest {
     public void retrieveExchangeValue() {
         final ExchangeValue exchangeValue = new ExchangeValue(1L, EURO, DOLAR, BigDecimal.valueOf(1.2));
 
-        when(this.exchangeValueRepository.findByFromAndTo(any(), any())).thenReturn(exchangeValue);
+        when(this.exchangeValueRepository.findByFromAndTo(any(), any())).thenReturn(Optional.of(exchangeValue));
 
         ExchangeValue exchangeValueResult = this.currencyExchangeService.retrieveExchangeValue(EURO, DOLAR);
 

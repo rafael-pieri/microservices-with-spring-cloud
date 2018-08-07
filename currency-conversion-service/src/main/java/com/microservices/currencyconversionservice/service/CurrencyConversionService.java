@@ -11,10 +11,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class CurrencyConversionService {
 
-    private static final String CALLING_CURRENCY_EXCHANGE_SERVICE = "Calling currency exchange service...";
-    private static final String CURRENCY_EXCHANGE_SERVICE_RESPONSE = "currency exchange service response: {}";
-    private final CurrencyExchangeServiceProxy currencyExchangeServiceProxy;
     private Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    private final CurrencyExchangeServiceProxy currencyExchangeServiceProxy;
 
     @Autowired
     public CurrencyConversionService(CurrencyExchangeServiceProxy currencyExchangeServiceProxy) {
@@ -22,11 +21,11 @@ public class CurrencyConversionService {
     }
 
     public CurrencyConversionDTO convertCurrency(String from, String to, BigDecimal quantity) {
-        logger.info(CALLING_CURRENCY_EXCHANGE_SERVICE);
+        logger.info("Calling currency exchange service...");
 
         final CurrencyConversionDTO response = currencyExchangeServiceProxy.retrieveExchangeValue(from, to);
 
-        logger.info(CURRENCY_EXCHANGE_SERVICE_RESPONSE, response);
+        logger.info("Currency exchange service response: {}", response);
 
         return new CurrencyConversionDTO(response.getId(), from, to, response.getConversionMultiple(), quantity,
             quantity.multiply(response.getConversionMultiple()));
