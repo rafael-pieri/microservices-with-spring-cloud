@@ -23,7 +23,7 @@ Execute the following command to deploy the application:
 
 |     Application       |     URL          |
 | ------------- | ------------- |
-| Currency Exchange Service | http://localhost:8000/api/currency-exchange/from/EUR/to/INR http://localhost:8001/currency-exchange/from/USD/to/INR|
+| Currency Exchange Service | http://localhost:8000/api/currency-exchange/from/EUR/to/INR
 | Currency Converter Service | http://localhost:8100/api/currency-converter/from/USD/to/INR/quantity/10|
 | Eureka Server | http://localhost:8761/|
 | Zuul - Currency Exchange & Exchange Services | http://localhost:8765/api/currency-exchange-service/currency-exchange/from/EUR/to/INR http://localhost:8765/api/currency-conversion-service/currency-converter-feign/from/USD/to/INR/quantity/10|
