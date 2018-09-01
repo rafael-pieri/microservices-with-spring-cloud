@@ -1,4 +1,4 @@
-# Spring MicroServices
+# Microservices with Spring Cloud
 
 ## Overview
 This repository contains an example of how to implement microservices with Spring Cloud.
