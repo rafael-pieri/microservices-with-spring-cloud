@@ -1,1 +1,8 @@
-language: java
+language: generic
+
+scripts: 
+  - cd currency-conversion-service && mvn clean install && cd ..
+  - cd currency-exchange-service && mvn clean install && cd ..
+  - cd eureka-service && mvn clean install && cd ..
+  - cd zuul-api-gateway && mvn clean install && cd ..
+  - cd zipkin-server && mvn clean install && cd ..
