@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/rafael-pieri/microservices-with-spring-cloud.svg?branch=master)](https://travis-ci.com/rafael-pieri/microservices-with-spring-cloud)
+
 # Microservices with Spring Cloud
 
 ## Overview
